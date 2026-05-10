@@ -1,0 +1,58 @@
+# Java / Maven
+/target/
+**/target/
+!*/src/**
+*.class
+*.jar
+*.war
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+**/node_modules/
+/build/
+/dist/
+
+# React build
+nexuslab/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Logs
+logs/
+*.log
+
+# Others
+*.local
+*.env.*
+
+# IDE
+*.classpath
+*.project
+
+# Maven wrapper
+.mvn/
+
+# Spring Boot
+spring.log
+
+# OneDrive temp files
+~$*
+
+# Ignore backend target specifically
+/backend/target/
+
+# Ignore frontend build directories
+/nexuslab/build/
+/nexuslab/node_modules/
