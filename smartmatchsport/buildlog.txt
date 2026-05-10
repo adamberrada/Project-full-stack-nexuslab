@@ -1,0 +1,96 @@
+
+> my-app-frontend@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled with warnings.
+
+[eslint] 
+src\App.tsx
+  Line 5:8:     'styles' is defined but never used                        @typescript-eslint/no-unused-vars
+  Line 6:10:    'Routes' is defined but never used                        @typescript-eslint/no-unused-vars
+  Line 6:18:    'Route' is defined but never used                         @typescript-eslint/no-unused-vars
+  Line 13:9:    'Section4' is defined but never used                      @typescript-eslint/no-unused-vars
+  Line 14:9:    'Section5' is defined but never used                      @typescript-eslint/no-unused-vars
+  Line 14:19:   'LoadMoreButton' is defined but never used                @typescript-eslint/no-unused-vars
+  Line 18:10:   'Link' is defined but never used                          @typescript-eslint/no-unused-vars
+  Line 19:10:   'CatalogSection' is defined but never used                @typescript-eslint/no-unused-vars
+  Line 85:21:   'setAllEvents' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 88:10:   'hasMoreEvents' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 90:10:   'loading' is assigned a value but never used              @typescript-eslint/no-unused-vars
+  Line 90:19:   'setLoading' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 91:10:   'error' is assigned a value but never used                @typescript-eslint/no-unused-vars
+  Line 91:17:   'setError' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  Line 92:10:   'isExpanded' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 92:21:   'setIsExpended' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 93:10:   'allMission' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 93:22:   'setAllMission' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 94:10:   'allMember' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  Line 94:21:   'setAllMember' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 95:10:   'displayedMission' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 95:28:   'setDisplayedMission' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 96:10:   'displayedMember' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  Line 96:27:   'setDisplayedMember' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  Line 164:13:  'handleContentLoad' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  Line 169:13:  'loadMoreEvents' is assigned a value but never used       @typescript-eslint/no-unused-vars
+
+src\components\ProductReviews.tsx
+  Line 69:6:  React Hook useEffect has a missing dependency: 'loadReviews'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\ProfilePage.tsx
+  Line 35:10:  'message' is assigned a value but never used                                                               @typescript-eslint/no-unused-vars
+  Line 81:9:   'handleChange' is assigned a value but never used                                                          @typescript-eslint/no-unused-vars
+  Line 88:9:   'handleSubmit' is assigned a value but never used                                                          @typescript-eslint/no-unused-vars
+  Line 146:9:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+src\components\header.tsx
+  Line 225:21:  Elements with the ARIA role "option" must have the following attributes defined: aria-selected  jsx-a11y/role-has-required-aria-props
+
+src\components\section1.tsx
+  Line 5:8:     'brown' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  Line 6:8:     'blue' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  Line 7:8:     'fire' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  Line 16:10:   'DotLottieReact' is defined but never used                                                                        @typescript-eslint/no-unused-vars
+  Line 17:8:    'spin' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  Line 18:10:   'Link' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  Line 63:13:   'btnRef' is assigned a value but never used                                                                       @typescript-eslint/no-unused-vars
+  Line 64:11:   'handleMouseMove' is assigned a value but never used                                                              @typescript-eslint/no-unused-vars
+  Line 154:6:   React Hook useEffect has a missing dependency: 'activeProduct'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 203:84:  Unnecessary escape character: \"                                                                                  no-useless-escape
+  Line 203:98:  Unnecessary escape character: \"                                                                                  no-useless-escape
+
+src\components\section2.tsx
+  Line 5:8:   'ImageLogo' is defined but never used          @typescript-eslint/no-unused-vars
+  Line 6:28:  'Draw' is defined but never used               @typescript-eslint/no-unused-vars
+  Line 12:9:  'logoUrl' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  Line 13:9:  'logoUrl1' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src\components\section3.tsx
+  Line 10:9:  'logoUrl' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  Line 11:9:  'logoUrl1' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src\components\section6.tsx
+  Line 9:8:  'styles' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  179 kB (+1 B)      build\static\js\main.6852d5c4.js
+  12.04 kB (-102 B)  build\static\css\main.6b1f04ed.css
+  1.77 kB            build\static\js\453.499731f2.chunk.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
