@@ -1,0 +1,225 @@
+/* ------------------------------------------------------------ */
+/* section2 */
+.section2-container {
+    background-color: #1e1f22 ;
+    /* background-image: url("../image/soccerStdImage.png");
+    background-repeat: no-repeat;
+    background-position: right; */
+    height: 100dvh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    /* border: 1px solid rgb(0, 0, 0); */
+
+  }
+
+  .section2-container::before,
+  .section2-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 90px;
+    pointer-events: none;
+    z-index: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .section2-container::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(30, 31, 34, 0.95), rgba(30, 31, 34, 0));
+  }
+
+  .section2-container::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(30, 31, 34, 0.95), rgba(30, 31, 34, 0));
+  }
+
+  .wrapper {
+    height: 100dvh;
+    position: relative;
+    z-index: 1;
+
+  }
+  .tag {
+    width: 20%;
+    min-height: 5vh;
+    color: white;
+    border: 1px solid silver;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px 0  0  0px;
+    align-items: center;
+    
+}
+.tag  .span {
+    font-weight: bold;
+
+    
+}
+.dot-tag {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    animation: tagdot 3s infinite;
+    transition: tagdot 0.8s ease;
+    
+}
+.tagS {
+   font-family: 'Tuerca Bold', sans-serif;
+}
+
+   @keyframes tagdot  {
+    0% {
+      background-color: #ffffff;
+    }
+    50% {
+      background-color: #5623d8;
+    }
+    100% {
+      background-color: #ffffff;
+
+    }
+}
+  .tag-header {
+      width: 900px;
+    margin: 20px 0px;
+    font-size: 40px;
+    color: white;
+    font-family: 'savior bold', sans-serif;
+    font-weight: bold;
+  }
+  .F1  {
+    z-index:  1;
+    position: absolute;
+    /* background-color: rgb(27, 22, 22); */
+    /* background: linear-gradient(rgb(233, 233, 233),rgb(233, 233, 233),black); */
+    height: 115dvh;
+    width: 200px;
+    left: 0%;
+    border-radius: 10px;
+  
+  /* bottom: 0; */
+  }
+  .F2{
+    z-index:  1;
+    position: absolute;
+    /* background-color: rgb(27, 22, 22); */
+    background: linear-gradient(rgb(233, 233, 233),rgb(233, 233, 233),black);
+  
+    height: 115dvh;
+    width: 200px;
+    right: 0%; 
+    border-radius: 10px;
+  
+  }
+  video {
+    /* z-index: -1; */
+    width: 100%;
+    /* height: 100dvh; */
+  }
+  img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .P2 { 
+    display: grid;
+    grid-template-columns: 45dvh 45dvh 45dvh 45dvh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  .P2-inside {
+    position: relative;
+  }
+  .S2_C1_CC {
+    
+    color: #000000;
+    border: 3px solid #1e1f22 ;
+    height: 50dvh;
+    margin: calc(100% - 260px) 0;
+    border-radius: 50px;
+    background-color: #1e1f22;
+
+  }
+  .S2_C1_CC .c1, .S2_C1_CC .c2, .S2_C1_CC .c3  {
+    position: absolute;
+    height: 30dvh;
+    width: 38dvh;
+    margin: 10px  50px;
+    top: 0%;
+    
+}
+
+.c2, .c3 {
+    top: 0%;
+
+}
+
+
+  .S2_C1_CC .c3 {
+    position: absolute;
+    height: 30dvh;
+    width: 38dvh;
+    margin: 10px  50px;
+    top: 0%;
+
+}
+ .N {
+  border-radius: 20px;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+
+}
+
+
+
+
+.cc1 {
+  /* width: 400px; */
+  height: 100px;
+  margin: 20dvh 10px;
+
+}
+
+.hc1 {
+  margin: 5px 15px;
+  font-size: 15px;
+  color: white;
+   font-family: 'Tuerca Bold', sans-serif;
+
+
+}
+
+
+.hc2 {
+  margin: 15px;
+  color: rgb(167, 167, 167);
+  font-size: 15px;
+  font-family: 'Bebas Neue', sans-serif;
+font-weight: 700;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+  video {
+    /* z-index: -1; */
+    width: 100%;
+    /* height: 100dvh; */
+  }
+}
+@media only screen and (max-width: 700px) {
+  .section2-container {
+    background-color: black;
+  }
+}

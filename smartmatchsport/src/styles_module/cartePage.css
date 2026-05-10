@@ -1,0 +1,416 @@
+.totalAndCheckout {
+    width: 30dvh;
+    height: 10dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px 0;
+    flex-direction: column;
+    border-top: 1px solid #5623d8;
+    border-bottom: 1px solid #5623d8;
+}
+.gridQutCart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40dvh;
+    align-items: center;
+    border-bottom: 1px solid #5623d8;
+    border: r;
+}
+.cart-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 7px solid transparent;
+  transition: border-color 360ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  
+}
+.checkoutButtom {
+     /* marginTop: 12; */
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(15, 23, 42, 0.78);
+    color: #fff;
+    cursor: pointer;
+}
+.cartEmpty {
+    margin: 0 auto;
+    width: 20dvh;
+    height: 10dvh;
+     font-family: 'savior bold', sans-serif;
+}
+.logincasefailed {
+    color:  white;
+    margin: 0 auto;
+    width: 60dvh;
+    height: 20dvh;
+font-size: 20px;
+margin: 100px auto;
+}
+.cartANdCheckoutGrid {
+    display: grid;
+    grid-template-columns: 1fr 60dvh;
+    /* background-color: #5623d8; */
+}
+
+
+.cart-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1) rotate(0deg);
+  transition: transform 2100ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  z-index: 0;
+}
+.cart-card:hover .cart-card-bg {
+  transform: scale(1.22) rotate(2deg);
+}
+
+.cart-card > div:not(.cart-card-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.cart-order-button {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 200px;
+  height: 42px;
+  border: 0;
+  border-radius: 9px;
+  background: #5623d8;
+  color: #1e0f21;
+  transform: translate3d(0, 0, 0);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  transition: background 0.2s linear 0.6s, box-shadow 0.6s ease, transform 0.3s ease;
+  overflow: hidden;
+  will-change: transform;
+  cursor: pointer;
+  font-family: 'savior bold', sans-serif;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart-order-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5623d8;
+  border-radius: 50% 50% 0 0;
+  transform: translateY(100%) scaleY(0.5);
+  transition: all 0.6s ease;
+}
+
+.cart-order-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  color: white;
+  border-radius: 0;
+  transform: translateY(0) scaleY(1);
+  transition: all 0.6s ease;
+}
+
+.cart-order-button > div {
+  position: relative;
+  top: 12px;
+  width: 100%;
+  height: 48px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.cart-order-button > div > span {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.cart-order-button > div > span:first-child {
+  color: white;
+  transform: translateY(24px);
+}
+
+.cart-order-button > div > span:last-child {
+  color: #1e0f21;
+  transform: translateY(0);
+}
+
+.cart-order-button:hover {
+  background: #5623d8;
+  transition-delay: 0.6s;
+  box-shadow: 0 0 18px rgba(3, 3, 3, 0.35);
+}
+
+.cart-order-button:hover::after {
+  border-radius: 0 0 50% 50%;
+  transform: translateY(-100%) scaleY(0.5);
+  transition-delay: 0;
+}
+
+.cart-order-button:hover::before {
+  border-radius: 0;
+  transform: translateY(0) scaleY(1);
+  transition-delay: 0;
+}
+
+.cart-order-button:hover > div > span:first-child {
+  transform: translateY(0);
+}
+
+.cart-order-button:hover > div > span:last-child {
+  transform: translateY(-24px);
+}
+
+.cart-order-button:active {
+  transform: scale(0.98);
+  justify-content: space-between;
+}
+
+
+.cart-card-actions {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transform: translateY(10px);
+  transition: max-height 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 320ms ease, margin-top 360ms cubic-bezier(0.22, 1, 0.36, 1), transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cart-card:hover .cart-card-actions {
+  max-height: 96px;
+  opacity: 1;
+  margin-top: 12px;
+  transform: translateY(0);
+}
+
+
+/* Main Input Styling */
+.quantity-input {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(139, 92, 246, 0.5); /* Purple border */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  width: 80px;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+/* Focus State - Glow Effect */
+.quantity-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6),
+              inset 0 0 10px rgba(139, 92, 246, 0.2);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Remove spinner arrows (Chrome, Safari, Edge) */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove spinner arrows (Firefox) */
+.quantity-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Hover State */
+.quantity-input:hover {
+  border-color: rgba(139, 92, 246, 0.8);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+
+/* 1. The Container: Glassmorphism Panel */
+.totalAndCheckout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns content to the right */
+  gap: 15px;
+  height: 15dvh;
+  
+  /* Glass Effect */
+  background: rgba(13, 17, 38, 0.75); /* Dark blue/purple tint */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.4); /* Purple border */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  min-width: 250px;
+    font-family: 'savior bold', sans-serif;
+}
+
+/* 2. The Total Text */
+.total-text {
+  font-family: 'Bebas Neue', sans-serif; /* Matches your headers */
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price-highlight {
+  color: #8b5cf6; /* Purple color for the amount */
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.6); /* Glow effect */
+  margin-left: 5px;
+    font-family: 'savior bold', sans-serif;
+
+}
+
+/* 3. The Checkout Button */
+.checkoutButtom {
+  width: 100%;
+  padding: 12px 20px;
+  font-family: 'Orbitron', sans-serif; /* Tech font */
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: white;
+  
+  /* Gradient Background */
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  /* Initial Glow */
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+/* Button Hover Effect */
+.checkoutButtom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+}
+
+/* Button Active (Click) Effect */
+.checkoutButtom:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 5px rgba(139, 92, 246, 0.5);
+}
+
+/* Optional: Shiny sweep animation on hover */
+.checkoutButtom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.checkoutButtom:hover::before {
+  left: 100%;
+}
+/* Container for the Guarantees Section */
+.guarantees-section {
+     font-family: 'Tuerca Bold', sans-serif;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(139, 92, 246, 0.2); /* Subtle purple separator */
+}
+
+/* Title "Nos garanties" */
+.guarantees-title {
+   font-family: 'Tuerca Bold', sans-serif; /* Matches your headers */
+  color: #a78bfa; /* Light purple text */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Grid Layout */
+.guarantees-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 15px;
+}
+
+/* Individual Card Style */
+.guarantee-card {
+  text-align: center;
+  padding: 15px 10px;
+  background: rgba(20, 20, 30, 0.4); /* Very subtle background */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.guarantee-card:hover {
+  background: rgba(139, 92, 246, 0.1); /* Glow on hover */
+  transform: translateY(-2px);
+}
+
+/* Icon Style */
+.guarantee-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #8b5cf6;
+}
+
+/* Card Heading */
+.guarantee-card h4 {
+ font-family: 'Tuerca Bold', sans-serif;
+  color: #ffffff;
+  font-size: 0.85rem;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+
+/* Card Text */
+.guarantee-card p {
+ font-family: 'Bebas Neue', sans-serif;
+  color: #9ca3af; /* Grey text */
+  font-size: 0.90rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .guarantees-grid {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+  }
+}

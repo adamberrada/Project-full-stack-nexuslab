@@ -1,0 +1,146 @@
+/* ------------------------------------------------------------ */
+/* section2 */
+.section3-container {
+    /* background-color: #1e1f22 ; */
+    /* background-image: url("../image/soccerStdImage.png");
+    background-repeat: no-repeat;
+    background-position: right; */
+    height: 100dvh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+.pillerss3 {
+  position: absolute;
+     background-color: #1e1f22 ;
+     width: 15dvh ;
+     height: 100dvh;
+}
+.p1 {
+left: 0%;
+}
+.p2 {
+right: 0%;
+}
+.a1 {
+  transform: rotate(90deg);
+  top: -99%;
+     height: 200dvh;
+  
+}
+.a2 {
+  transform: rotate(90deg);
+  bottom: -99%;
+     height: 200dvh;
+  
+}
+  .wrappers3 {
+    height: 90dvh;
+    width: 180dvh;
+    background-color: #3c3d42 ;
+    background: transparent;
+
+    /* border: 1px solid white; */
+   display: grid;
+   grid-template-rows: 160px 160px;
+   row-gap: 60px;
+   justify-content: stretch;
+    /* background-image: url("../new\ beta\ images/home10-img1.webp"); */
+
+  }
+  .dottags3 {
+   font-family: 'Tuerca Bold', sans-serif;
+    
+  }
+  .tags3 {
+    width: 20%;
+    min-height: 5vh;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0px;
+    align-items: center;
+}
+.tags3 .span {
+    font-weight: bold;
+}
+.dot-tags3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    animation: tagdot 3s infinite;
+    transition: tagdot 0.8s ease;
+    
+}
+
+   @keyframes tagdot  {
+    0% {
+      background-color: #ffffff;
+    }
+    50% {
+      background-color: #5623d8;
+    }
+    100% {
+      background-color: #ffffff;
+
+    }
+}
+  .tags3-header {
+      width: 700px;
+    margin: 0px ;
+    font-size: 45px;
+    color: white;
+    font-family: 'savior bold', sans-serif;
+    font-weight: bold;
+
+  }
+ 
+
+  .insdie-wrapper3:nth-child(1) {
+    /* background-color: #5623d8; */
+    height: 30dvh;
+    margin: 150px 0 0px 20dvh ;
+  }
+  .insdie-wrapper3:nth-child(2) {
+    /* background-color: #342263; */
+    height: 55dvh;
+    margin: 120px 0 0 20dvh ;
+    width: 900px;
+
+  }
+  .contents3 {
+  color: rgb(167, 167, 167);
+    margin: 30px 0;
+    width: 900px;
+   font-family: 'Tuerca Bold', sans-serif;
+
+  }
+  .button-content3 {
+    color: white;
+    border: 2px solid white;
+    width: 300px;
+    border-radius: 30px;
+    margin: 50px 0;
+    cursor: pointer;
+   font-family: 'Tuerca Bold', sans-serif;
+
+  }
+ 
+
+
+
+@media only screen and (max-width: 500px) {
+  video {
+    /* z-index: -1; */
+    width: 100%;
+    /* height: 100dvh; */
+  }
+}
+@media only screen and (max-width: 700px) {
+  .section2-container {
+    background-color: black;
+  }
+}

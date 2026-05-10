@@ -1,0 +1,43 @@
+
+@font-face {
+  font-family: 'Tuerca Bold';
+  src: url('../public/fonts/TuercaBold.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'savior bold';
+  src: url('../public/fonts/savior.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Tuerca regular';
+  src: url('../public/fonts/TuercaRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5623d8 #1e1f22;
+}
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+
+
+  /* font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);  */
+
+}
+
+/* For Firefox */
+

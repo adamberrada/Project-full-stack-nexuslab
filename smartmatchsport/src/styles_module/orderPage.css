@@ -1,0 +1,212 @@
+.orderContent {
+    /* background-color: azure; */
+    width: 120dvh;
+    margin: 10dvh auto;
+}
+.logincasefailed {
+    color:  white;
+    margin: 0 auto;
+    width: 70dvh;
+    height: 20dvh;
+font-size: 20px;
+margin: 100px auto;
+}
+.noOrder {
+        color:  white;
+    margin: 0 auto;
+    width: 100dvh;
+    height: 20dvh;
+font-size: 20px;
+margin: 100px auto;
+}
+/* Main Container - Floats over your cyberpunk background */
+.orders-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* Glassmorphism Card - Split Layout */
+.order-glass-card {
+  display: flex;
+  gap: 40px;
+  background: rgba(13, 17, 38, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+/* Left Side: Order Details */
+.order-details {
+  flex: 2;
+  border-right: 1px solid rgba(139, 92, 246, 0.2);
+  padding-right: 30px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.order-header h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  color: #8b5cf6;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.status-badge.confirmed {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+.order-meta {
+  font-family: 'Poppins', sans-serif;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+.order-item span:last-child {
+  color: #8b5cf6;
+  font-weight: 600;
+}
+
+/* Right Side: Summary & Button */
+.order-summary {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.summary-row.total {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.summary-row.total span:last-child {
+  color: #8b5cf6;
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+.summary-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+  margin: 10px 0;
+}
+
+/* Validate Button - Matches Checkout Style */
+.validate-btn {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: white;
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.validate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8);
+  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+}
+
+.validate-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.validate-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.validate-btn:hover::before {
+  left: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .order-glass-card {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .order-details {
+    border-right: none;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    padding-right: 0;
+    padding-bottom: 25px;
+  }
+}

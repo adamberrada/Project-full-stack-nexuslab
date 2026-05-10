@@ -1,0 +1,147 @@
+/* ------------------------------------------------------------ */
+/* section7 */
+.section7-container {
+    /* background-color: #1e1f22 ; */
+    /* background-image: url("../image/soccerStdImage.png");
+    background-repeat: no-repeat;
+    background-position: right; */
+    height: 100dvh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .pillerss7 {
+  position: absolute;
+     background-color: #1e1f22 ;
+     width: 15dvh ;
+     height: 100dvh;
+}
+.p71 {
+left: 0%;
+}
+.p72 {
+right: 0%;
+}
+.a71 {
+  transform: rotate(90deg);
+  top: -99%;
+     height: 200dvh;
+  
+}
+.a72 {
+  transform: rotate(90deg);
+  bottom: -99%;
+     height: 200dvh;
+}
+  .wrappers7 {
+    height: 90dvh;
+    width: 180dvh;
+    /* border: 1px solid white; */
+   display: grid;
+   grid-template-rows: 160px 160px;
+   row-gap: 60px;
+
+  }
+  .tags7 {
+    width: 20%;
+    min-height: 5vh;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0px;
+    align-items: center;
+}
+.tags7 .span {
+    font-weight: bold;
+}
+.dot-tags7 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    animation: tagdot 3s infinite;
+    transition: tagdot 0.8s ease;
+    
+}
+.manimage {
+  position: absolute;
+  right: 2%;
+  top: 18%;
+  z-index: 1;
+}
+
+   @keyframes tagdot  {
+    0% {
+      background-color: #ffffff;
+    }
+    50% {
+      background-color: #5623d8;
+    }
+    100% {
+      background-color: #ffffff;
+
+    }
+}
+  .tags7-header {
+      width: 900px;
+    margin: 0px 0px;
+    font-size: 45px;
+    color: white;
+    font-family: 'savior bold', sans-serif;
+    font-weight: bold;
+
+  }
+ 
+
+  .insdie-wrapper7:nth-child(1) {
+   height: 30dvh;
+    margin: 150px 0 0px 20dvh ;
+  }
+  .insdie-wrapper7:nth-child(2) {
+    height: 55dvh;
+    margin: 120px 0 0 20dvh ;
+    width: 900px;
+    
+
+  }
+  .contents7 {
+   color: rgb(167, 167, 167);
+    margin: 30px 0;
+    width: 900px;
+   font-family: 'Tuerca Bold', sans-serif;
+
+  }
+  .button-content7 {
+    color: white;
+    /* border: 2px solid white; */
+    width: 200px;
+    border-radius: 30px;
+    margin: 50px 0;
+  }
+ .iconPlayStore {
+  cursor: pointer;
+    height: 50px;
+    width: 50px;
+    
+  }
+  .playStoreFont {
+   font-family: 'Tuerca Bold', sans-serif;
+
+  }
+
+
+@media only screen and (max-width: 500px) {
+  video {
+    /* z-index: -1; */
+    width: 100%;
+    /* height: 100dvh; */
+  }
+}
+@media only screen and (max-width: 700px) {
+  .section2-container {
+    background-color: black;
+  }
+}

@@ -1,0 +1,200 @@
+
+.catalog-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 7px solid transparent;
+  transition: border-color 360ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  
+}
+
+.catalog-card:hover {
+  border-color: rgba(86, 35, 216, 0.75);
+  box-shadow: 0 18px 50px rgba(86, 35, 216, 0.24);
+}
+
+.catalog-card-content {
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.catalog-card:hover .catalog-card-content {
+  transform: translateY(-10px);
+}
+
+.catalog-card-actions {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transform: translateY(10px);
+  transition: max-height 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 320ms ease, margin-top 360ms cubic-bezier(0.22, 1, 0.36, 1), transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.catalog-card:hover .catalog-card-actions {
+  max-height: 96px;
+  opacity: 1;
+  margin-top: 12px;
+  transform: translateY(0);
+}
+
+.catalog-order-button {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 200px;
+  height: 42px;
+  border: 0;
+  border-radius: 9px;
+  background: #5623d8;
+  color: #1e0f21;
+  transform: translate3d(0, 0, 0);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  transition: background 0.2s linear 0.6s, box-shadow 0.6s ease, transform 0.3s ease;
+  overflow: hidden;
+  will-change: transform;
+  cursor: pointer;
+  font-family: 'savior bold', sans-serif;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.catalog-order-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5623d8;
+  border-radius: 50% 50% 0 0;
+  transform: translateY(100%) scaleY(0.5);
+  transition: all 0.6s ease;
+}
+
+.catalog-order-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  color: white;
+  border-radius: 0;
+  transform: translateY(0) scaleY(1);
+  transition: all 0.6s ease;
+}
+
+.catalog-order-button > div {
+  position: relative;
+  top: 12px;
+  width: 100%;
+  height: 48px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.catalog-order-button > div > span {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.catalog-order-button > div > span:first-child {
+  color: white;
+  transform: translateY(24px);
+}
+
+.catalog-order-button > div > span:last-child {
+  color: #1e0f21;
+  transform: translateY(0);
+}
+
+.catalog-order-button:hover {
+  background: #5623d8;
+  transition-delay: 0.6s;
+  box-shadow: 0 0 18px rgba(3, 3, 3, 0.35);
+}
+
+.catalog-order-button:hover::after {
+  border-radius: 0 0 50% 50%;
+  transform: translateY(-100%) scaleY(0.5);
+  transition-delay: 0;
+}
+
+.catalog-order-button:hover::before {
+  border-radius: 0;
+  transform: translateY(0) scaleY(1);
+  transition-delay: 0;
+}
+
+.catalog-order-button:hover > div > span:first-child {
+  transform: translateY(0);
+}
+
+.catalog-order-button:hover > div > span:last-child {
+  transform: translateY(-24px);
+}
+
+.catalog-order-button:active {
+  transform: scale(0.98);
+}
+
+.catalog-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1) rotate(0deg);
+  transition: transform 2100ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  z-index: 0;
+}
+.priceColor {
+  background-color: #5623d8;
+  width: 10dvh;
+  font-weight: bold;
+  /* margin: 10px 0 0 0; */
+}
+
+.catalog-card:hover .catalog-card-bg {
+  transform: scale(1.22) rotate(2deg);
+}
+
+.catalog-card > div:not(.catalog-card-bg) {
+  position: relative;
+  z-index: 1;
+}
+.margine {
+    width: 100%;
+    height: 10dvh;
+}
+ .pxl-overlay--gradient {
+  position: relative;
+  width: 100%;
+  height: 18%;
+  z-index: 0; /* > content, < header if needed /
+  pointer-events: none; / allows clicks through the overlay */
+  }
+  .gr1 {
+  left: 0;
+  background: linear-gradient(180deg, rgba(30,31,34,1) 0%, rgba(30,31,34,0) 100%);
+  top: 0;
+  }
+  .gr2 {
+ left: 0;
+  bottom: 10;
+  background: linear-gradient(0deg, rgba(30,31,34,1) 0%, rgba(30,31,34,0) 100%);
+  
+  }

@@ -1,0 +1,214 @@
+/* Main Widget Container */
+.review-widget {
+  margin: 20px 0;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3));
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.toggle-btn:hover {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(59, 130, 246, 0.5));
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Review Panel - Glass Card */
+.review-panel {
+  margin-top: 15px;
+  background: rgba(13, 17, 38, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Message Box */
+.review-message {
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  color: #fca5a5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+/* Form Styles */
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rating-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  color: #8b5cf6;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.rating-value {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.rating-select,
+.review-textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.rating-select:focus,
+.review-textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rating-select option {
+  background: #1a1a2e;
+  color: #ffffff;
+}
+
+.review-textarea::placeholder {
+  color: #6b7280;
+}
+
+/* Submit Button */
+.submit-review-btn {
+  padding: 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.submit-review-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8);
+  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+}
+
+/* Loading/Empty States */
+.loading-text,
+.empty-text {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 15px;
+}
+
+/* Reviews List */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  padding-top: 20px;
+}
+
+/* Individual Review Item */
+.review-item {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 10px;
+}
+
+.review-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.review-author {
+  font-family: 'Orbitron', sans-serif;
+  color: #a78bfa;
+  font-size: 0.95rem;
+}
+
+.review-meta {
+  font-family: 'Poppins', sans-serif;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-comment {
+  font-family: 'Poppins', sans-serif;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* RatingStars Component Styling */
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.rating-stars svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .review-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .toggle-btn {
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+}

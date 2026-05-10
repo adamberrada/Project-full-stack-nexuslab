@@ -1,0 +1,29 @@
+/* Minimal trailer cursor styles - do not modify body layout */
+
+#trailer {
+  height: 20px;
+  width: 20px;
+  background-color: #5623d8;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 1; /* controlled via mousemove animation */
+  transition: opacity 250ms ease;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+}
+
+#trailer[data-type] > #trailer-icon {
+  opacity: 1;
+}
+
+#trailer-icon {
+  font-size: 10px;
+  line-height: 1;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}

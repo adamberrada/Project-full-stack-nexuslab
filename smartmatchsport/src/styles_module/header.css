@@ -1,0 +1,553 @@
+/* Header */
+.header {
+  position: fixed;
+  line-height: 50px;
+  z-index: 1;
+  top: 0;
+  border: none;
+  background-color: transparent;
+  opacity: 1;
+  transition: none;
+  isolation: isolate;
+  /* border-bottom: 0.1px solid white; */
+    font-family: 'savior bold', sans-serif;
+
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  border-bottom: 0.1px solid #5623d8;
+
+  inset: 0;
+  background-color: #1e1f22;
+  opacity: var(--header-bg-opacity, 1);
+  transition: opacity 220ms ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.header--dimmed {
+  --header-bg-opacity: 0;
+}
+
+.header--solid {
+  --header-bg-opacity: 0.8;
+}
+.logo-name {
+  color: rgb(230, 230, 230);
+  width: 100px;
+  opacity: 1;
+}
+.grid-container-header {
+  display: grid;
+  grid-template-columns: max-content repeat(3, 1fr);
+  /* column-gap: 100px; */
+  width: 99vw;
+  height: 75px; 
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid white; */
+
+}
+.linkLogo {
+  z-index: 1;
+  margin: 0  5px;
+}
+.header-radial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #5623d8; */
+  padding-left: 0px;
+  /* margin: 0 30px; */
+  /* background-repeat: 2; */
+  /* border: 2px solid white; */
+
+}
+.header, .left-header, .right-header {
+  display: grid;
+
+  text-align: center;
+}
+.left-header {
+  grid-template-columns: 50px 120px;
+}
+.right-header {
+  grid-template-columns: 70px 120px;
+}
+.left-header-element-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* justify-content: ; */
+  /* align-items: center; */
+  height: 10vh;
+  /* background-color: #C0F11C; */
+  
+}
+.header-left-started-element {
+  border: none;
+  /* background-color: #4CAF50; */
+  background-color: #1e1f22;
+  width: 13vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #fdfdfd;
+}
+
+
+.headerAuthButton {
+  border: none;
+}
+.left-header-element-2-inside {
+  position: relative;
+  border: none;
+  width: 15vh;
+  /* background-color: #5623d8; */
+}
+.H1, .H2, .H3, .H4 {
+  /* display: flex; */
+  align-items: center;
+}
+.H1, .H2, .H3 {
+  color: #fffdfd;
+}
+.H1 {
+  justify-content: center;
+}
+
+/* ------------------------- */
+
+.searchContainer {
+  /* border: 2px solid white; */
+  height: 75px; 
+
+  position: relative;
+
+}
+
+.headerSearchForm {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.headerSearchDropdown {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(420px, 70vw);
+  background-color: #1e1f22;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.headerSearchSuggestion {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+
+.headerSearchSuggestion:hover {
+  background-color: #2a2b2f;
+}
+
+.headerSearchInput {
+  height: 40px;
+  width: min(340px, 38vw);
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #1e1f22;
+  color: #fdfdfd;
+  outline: none;
+}
+
+.headerSearchInput::placeholder {
+  color: rgba(253, 253, 253, 0.65);
+}
+
+.headerSearchButton {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #1e1f22;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+
+.headerSearchButton:hover {
+  background-color: #2a2b2f;
+}
+
+.headerCategoryButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+    font-family: 'savior bold', sans-serif;
+
+}
+
+.headerCategoryDropdown {
+  left: -10%;
+}
+
+.headerDropdownItem {
+  
+  border: none;
+  background: transparent;
+  color: rgb(230, 230, 230);
+  cursor: pointer;
+  /* font: inherit; */
+    font-family: 'savior bold', sans-serif;
+
+}
+
+.headerDropdownItem:hover {
+  color: #000000;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------- */
+.btn-5 {
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
+}
+.btn-5:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: #474646;
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+  opacity: 0.3;
+}
+.btn-5:hover:before {
+  width: 100%;
+}
+.btn-12 {
+  font-family: 'savior bold', sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 0 10px;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 30%;
+  left: 110%;
+  /* background-color: #fff; */
+}
+
+.dropdown-content {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: -40%;
+  width: 165dvh;
+  /* height: 160px; */
+  /* border-radius: 10px; */
+  /* border: 2px solid #C0F11C; */
+  /* z-index: 1; */
+  /* float: left; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.divSelect {
+flex: 0 1 170px; /* don't grow, can shrink, base width 180px */
+min-width: 140px;
+height: 35px;
+display: flex;
+justify-content: center;
+  background-color: #1e1f22;
+align-items: center;
+
+}
+.divSelect:hover   {
+  background-color:  #5623d8;
+  transition: background-color 1s;
+}
+.divSelect div:hover {
+  color: #cccccc;
+  transition: color 1s;
+
+}
+.divSelect a:hover {
+   color: rgb(233, 233, 233);
+  transition: color 1s;
+}
+.divSelect div {
+  background-color: #000000;
+  color: rgb(185, 185, 185);
+  margin: 0;
+  padding: 0;
+  color: white;
+  border: none;
+}
+.divSelect a {
+  text-decoration: none;
+   color: rgb(185, 185, 185);
+
+}
+
+.linkJoin {
+  text-decoration: none;
+  color: black;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .grid-container-header {
+      grid-template-columns: 1fr; 
+      column-gap: 0;
+      height: auto;
+      padding: 10px 0;
+  }
+  
+  .left-header, .right-header {
+      grid-template-columns: 1fr; 
+      justify-items: center;
+      margin: 5px 0;
+  }
+  
+  .header-radial {
+      margin: 10px 0;
+  }
+  
+  .left-header-element-2 {
+      height: auto;
+      margin: 10px 0;
+  }
+  
+
+  
+  .left-header-element-2-inside {
+      width: 120px; 
+  }
+  
+  .btn-5 {
+      margin: 5px 0;
+      padding: 8px 15px; 
+  }
+  
+  .dropdown-content {
+      width: 180px; 
+      left: -30%; 
+
+  }
+  
+ 
+  .logo-name, .H1, .H2, .H3, .H4 {
+      font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .grid-container-header {
+      padding: 5px 0;
+  }
+  
+  .header-left-started-element {
+      width: 130px;
+      height: 35px;
+  }
+  
+  .dropdown-content {
+      width: 160px;
+      height: 170px;
+  }
+  
+  .arrow {
+      width: 15px;
+      height: 15px;
+  }
+}
+
+/* ----------------------------------------------------------------------------- */
+
+  .animation-scroll-header {
+  
+          height: 0.5vh;
+          position: relative;
+          overflow: hidden;
+            z-index: -1;
+            /* background-color: #A7E92F ; */
+  }
+
+  
+  .inside-animation-scroll-item-header {
+    /* background-color: #a11414; */
+          position: absolute;
+          width: 135vh;
+          height: 10vh;
+          animation: a1 30s linear infinite;
+          right: max(calc(10vh * 1), 100%);
+          display: grid;
+          grid-template-rows: 20% 80%;
+          display: flex;
+          z-index: -1;
+    
+  }
+  .title{
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  @keyframes a1 {
+    to {
+        right: -970px;
+    }
+  }
+  .item1 {
+    animation-delay: calc(30s / 1 * (1 - 1) * -1);
+  }
+
+
+  
+.btn-epic-header {
+    position: relative;
+  isolation: isolate;
+    margin: auto;
+    width: 100%;
+    max-width: 200px;
+    height: 42px;
+    border: 0;
+    border-radius: 9px;
+    background: #5623d8;
+    color: #1e0f21;
+    transform: translate3d(0, 0, 0);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    transition: background 0.2s linear 0.6s, box-shadow 0.6s ease, transform 0.3s ease;
+    overflow: hidden;
+    will-change: transform;
+    cursor: pointer;
+    font-family: 'savior bold', sans-serif;
+   
+  }
+
+  .headerAuthButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e0f21;
+  }
+
+  .btn-epic-header > div,
+  .btn-epic-header > span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-epic-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5623d8;
+    border-radius: 50% 50% 0 0;
+    transform: translateY(100%) scaleY(0.5);
+    z-index: 0;
+    transition: all 0.6s ease;
+  }
+
+  .btn-epic-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    color: white;
+    border-radius: 0;
+    transform: translateY(0) scaleY(1);
+    z-index: 0;
+    transition: all 0.6s ease;
+  }
+
+  .btn-epic-header > div {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 28px;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+
+  .btn-epic-header > div > span {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+
+  .btn-epic-header > div > span:first-child {
+    color: white;
+    transform: translateY(24px);
+  }
+
+  .btn-epic-header > div > span:last-child {
+    color: #1e0f21;
+    transform: translateY(0);
+  }
+
+  .btn-epic-header:hover {
+    background: #5623d8;
+    transition-delay: 0.6s;
+    box-shadow: 0 0 18px rgba(3, 3, 3, 0.35);
+  }
+
+  .btn-epic-header:hover::after {
+    border-radius: 0 0 50% 50%;
+    transform: translateY(-100%) scaleY(0.5);
+    transition-delay: 0;
+  }
+
+  .btn-epic-header:hover::before {
+    border-radius: 0;
+    transform: translateY(0) scaleY(1);
+    transition-delay: 0;
+  }
+
+  .btn-epic-header:hover > div > span:first-child {
+    transform: translateY(0);
+  }
+
+  .btn-epic-header:hover > div > span:last-child {
+    transform: translateY(-24px);
+  }
+
+  .btn-epic-header:active {
+    transform: scale(0.98);
+  }

@@ -1,0 +1,125 @@
+.profileContainer {
+    /* background-color: #1E1F22; */
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    /* display: grid;
+    align-items: center;
+    justify-content: center; 
+    grid-template-rows: 10% 10% 10%;
+    row-gap: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 0;
+    /* background-image: url("../new\ beta\ images/home10-img1.webp"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'savior bold', sans-serif;
+}
+.profileInsideframe {
+    width: 90%;
+    min-height: 20vh;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 40% 40% ;
+    justify-content: space-between; 
+    /* column-gap: 10px;  */
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    background-color: rgb(0, 0, 0, 0.3);
+    animation: animaborder 3s infinite;
+    
+}
+  @keyframes animaborder  {
+    0% {
+      border:  #ffffff;
+    }
+    50% {
+      border: #5623d8;
+    }
+    100% {
+      border: #ffffff;
+
+    }
+}
+
+.profileInsideframe:last-child {
+    border: none;
+       /* background-color: #1E1F22; */
+
+}
+.profileFramLast {
+    width: 100%;
+    min-height: 20vh;
+    margin: 0 auto;
+    border: 2px solid black;
+    background-color: rgb(0, 0, 0, 0.3);
+    
+
+}
+.profileIdentityContainer {
+    position: absolute;
+    width: 38%;
+    min-height: 64.4vh;
+    border-radius: 10px;
+    border: 2px solid #5623d8;
+    box-shadow: 0px 0px 15px 0px white;
+    top: 120px;
+    background-color: rgb(0, 0, 0, 0.3);
+
+}
+.profileIdentityContainer img {
+    position: absolute;
+    right: -200px;
+    top: -70px;
+}
+.insideProfileIdentity {
+    width: 65%;
+    min-height: 54.4vh;
+    /* text-align: center; */
+    font-size:  22px;
+    font-weight: bold;
+}
+.anima {
+    width: 30%;
+    min-height: 5vh;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 10px;
+    align-items: center;
+}
+.anima .span {
+    font-weight: bold;
+}
+.dot-anima {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    animation: animadot 3s infinite;
+    transition: animadot 0.8s ease;
+    
+}
+
+   @keyframes animadot  {
+    0% {
+      background-color: #ffffff;
+    }
+    50% {
+      background-color: #5623d8;
+    }
+    100% {
+      background-color: #ffffff;
+
+    }
+}
+.labelProfile {
+    
+    color: white;
+    border-bottom: 1px solid #5623d8;
+    margin: 19px 30px;
+}
